@@ -4,7 +4,12 @@ import ReactDOM from 'react-dom';
 class Layout extends React.Component {
     render() {
         return (
-            <h1>test</h1>
+            <div class="container">
+                <h1>Hello!</h1>
+                <p>This site is a showcase of what I learnt from React.</p>
+                <p>It is currently empty as I still need to learn more.</p>
+                <p>Stay tuned!</p>
+            </div>
         );
     }
 }
