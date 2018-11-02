@@ -13,11 +13,9 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
                 options: {
-                    presets: ['react', 'es2015'],
+                    presets: ['@babel/preset-react', '@babel/preset-env'],
                     plugins: [
                         'react-html-attrs',
-                        'transform-class-properties',
-                        'transform-decorators-legacy',
                         [
                             'react-css-modules',
                             {
