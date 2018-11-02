@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./hugeTitle.css";
 
 const HugeTitle = (props) => {
-    var styleClassName = styles.title;
+    let styleClassName = styles.title;
     if (props.highlight) {
         styleClassName += " " + styles.highlight;
     }

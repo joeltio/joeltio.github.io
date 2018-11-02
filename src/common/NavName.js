@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./navName.css";
 
 const NavName = props => {
-    var styleName = styles.nav;
+    let styleName = styles.nav;
     if (props.selected) {
         styleName += " " + styles.selected;
     } else {
