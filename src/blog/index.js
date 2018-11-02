@@ -1,7 +1,11 @@
 import React from "react";
 
+import NavBar from "./NavBar";
+
 const BlogLayout = () => (
-    <div>This is the blog</div>
+    <div>
+        <NavBar />
+    </div>
 );
 
 export default BlogLayout;
