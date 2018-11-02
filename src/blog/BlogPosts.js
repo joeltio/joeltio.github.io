@@ -6,7 +6,10 @@ import BlogPost from "./BlogPost";
 export default class BlogPosts extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {posts: []}
+        this.state = {
+            placeholder: "",
+            posts: []
+        }
     }
 
     addPost(post) {
@@ -33,12 +36,18 @@ export default class BlogPosts extends React.Component {
                             this.addPost(postResponse.data);
                         });
                 }
+
+                // Put some placeholder text if there are not posts
+                this.setState({
+                    placeholder: <p>There is nothing to see here...</p>
+                });
             })
     }
 
     render() {
         return (
             <div class="mt-4">
+                {this.state.placeholder}
                 {this.state.posts}
             </div>
         );
