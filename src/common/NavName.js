@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import styles from "./navName.css";
 
 const NavName = props => {
@@ -10,7 +12,9 @@ const NavName = props => {
     }
 
     return (
-        <p className={styleName}>{props.children}</p>
+        <Link to={props.to}>
+            <p className={styleName}>{props.children}</p>
+        </Link>
     );
 };
 
