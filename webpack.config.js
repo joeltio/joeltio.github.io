@@ -21,7 +21,9 @@ module.exports = {
                             'react-css-modules',
                             {
                                 'filetypes': {
-                                    ".scss": "postcss-scss"
+                                    ".scss": {
+                                        "syntax": "postcss-scss"
+                                    }
                                 }
                             }
                         ]
