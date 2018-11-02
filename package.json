@@ -19,8 +19,8 @@
   "homepage": "https://github.com/joeltio/joeltio.github.io#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-plugin-react-css-modules": "^2.7.1",
     "babel-plugin-react-html-attrs": "^2.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
