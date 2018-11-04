@@ -16,6 +16,7 @@ module.exports = {
                     presets: ['@babel/preset-react', '@babel/preset-env'],
                     plugins: [
                         'react-html-attrs',
+                        '@babel/plugin-syntax-dynamic-import',
                         [
                             'react-css-modules',
                             {
@@ -52,6 +53,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/build/',
+        publicPath: '/build/',
         filename: 'client.min.js'
     },
     plugins: debug ? [] : [

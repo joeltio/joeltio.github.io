@@ -2,8 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Route, HashRouter } from "react-router-dom";
 
-import HomeLayout from "./home/index";
-import BlogLayout from "./blog/index";
+import Loadable from "react-loadable";
+
+const HomeLayout = Loadable({
+    loader: () => import("./home/index"),
+    loading() {
+        return (<p>Loading</p>);
+    }
+});
+
+const BlogLayout = Loadable({
+    loader: () => import("./blog/index"),
+    loading() {
+        return (<p>Loading</p>);
+    }
+});
 
 const MainLayout = () => (
     <HashRouter>
