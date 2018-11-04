@@ -1,10 +1,5 @@
-var debug = process.env.NODE_ENV != 'production';
-const webpack = require('webpack');
-
 module.exports = {
-    mode: debug? 'development' : 'production',
     context: __dirname,
-    devtool: debug ? 'inline-sourcemap' : false,
     entry: './src/client.js',
     module: {
         rules: [
@@ -56,8 +51,4 @@ module.exports = {
         publicPath: '/build/',
         filename: 'client.min.js'
     },
-    plugins: debug ? [] : [
-        new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({ mangle: false, soucemap: false })
-    ]
 };
