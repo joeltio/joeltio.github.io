@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import SmallName from "../common/SmallName";
 import NavName from "../common/NavName";

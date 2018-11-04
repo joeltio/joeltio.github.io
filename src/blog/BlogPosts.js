@@ -37,7 +37,7 @@ export default class BlogPosts extends React.Component {
                         });
                 }
 
-                // Put some placeholder text if there are not posts
+                // Put some placeholder text if there are no posts
                 this.setState({
                     placeholder: <p>There is nothing to see here...</p>
                 });
