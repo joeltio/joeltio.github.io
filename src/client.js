@@ -1,20 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Loadable from "react-loadable";
 import { Route, HashRouter } from "react-router-dom";
 
-import Loadable from "react-loadable";
+import Loading from "./common/Loading";
 
 const HomeLayout = Loadable({
     loader: () => import("./home/index"),
     loading() {
-        return (<p>Loading</p>);
+        return <Loading />;
     }
 });
 
 const BlogLayout = Loadable({
     loader: () => import("./blog/index"),
     loading() {
-        return (<p>Loading</p>);
+        return <Loading />;
     }
 });
 
