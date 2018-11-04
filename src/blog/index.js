@@ -1,15 +1,25 @@
 import React from "react";
+import Loadable from "react-loadable";
 
-import NavBar from "./NavBar";
-import BlogPosts from "./BlogPosts";
+const NavBar = Loadable({
+    loader: () => import("./NavBar"),
+    loading() {
+        return <p>Loading</p>;
+    }
+});
 
-const BlogLayout = props => {
-    return (
-        <div>
-            <NavBar />
-            <BlogPosts />
-        </div>
-    );
-};
+const BlogPosts = Loadable({
+    loader: () => import("./BlogPosts"),
+    loading() {
+        return <p>Loading</p>;
+    }
+});
+
+const BlogLayout = () => (
+    <div>
+        <NavBar />
+        <BlogPosts />
+    </div>
+);
 
 export default BlogLayout;

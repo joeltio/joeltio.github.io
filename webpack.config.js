@@ -2,6 +2,7 @@ var debug = process.env.NODE_ENV != 'production';
 const webpack = require('webpack');
 
 module.exports = {
+    mode: debug? 'development' : 'production',
     context: __dirname,
     devtool: debug ? 'inline-sourcemap' : false,
     entry: './src/client.js',
@@ -12,16 +13,17 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
                 options: {
-                    presets: ['react', 'es2015'],
+                    presets: ['@babel/preset-react', '@babel/preset-env'],
                     plugins: [
                         'react-html-attrs',
-                        'transform-class-properties',
-                        'transform-decorators-legacy',
+                        '@babel/plugin-syntax-dynamic-import',
                         [
                             'react-css-modules',
                             {
                                 'filetypes': {
-                                    ".scss": "postcss-scss"
+                                    ".scss": {
+                                        "syntax": "postcss-scss"
+                                    }
                                 }
                             }
                         ]
@@ -51,6 +53,7 @@ module.exports = {
     },
     output: {
         path: __dirname + '/build/',
+        publicPath: '/build/',
         filename: 'client.min.js'
     },
     plugins: debug ? [] : [

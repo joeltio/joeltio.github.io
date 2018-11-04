@@ -1,4 +1,5 @@
 import React from "react";
+
 import styles from "./smallName.css";
 
 const SmallName = props => {
