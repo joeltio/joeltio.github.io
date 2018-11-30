@@ -7,7 +7,7 @@ const BlogPost = props => (
         <div className={styles.post}>
             <h2 className={styles.title}>{props.title}</h2>
             <h3 className={styles.datetime}>{props.datetime}</h3>
-            <p className={styles.text}>{props.children}</p>
+            <p className={styles.text} dangerouslySetInnerHTML={{__html: props.children}}></p>
         </div>
     </section>
 );
