@@ -1,5 +1,5 @@
 {
     "title": "Idea Approved",
     "datetime": "30th Nov 2018",
-    "content": "Last week, our Portfolio 1 teacher, Mr Saiful, had approved our idea. My partner (Sean) and I have the idea of creating a system for distributed computing using browsers.\n<img src='posts/idea.jpg'>\nSimilar to Cryptojacking, websites include our JavaScript which calls our backend. Our backend then sends across the tasks to execute. After the client has executed the task, they send back the result to our backend.\n\nI foresee that this could be applied to any field that requires a large amount of concurrent tasks, for example, Machine Learning."
+    "content": "Last week, our Portfolio 1 teacher, Mr Saiful, had approved our idea. My partner (Sean) and I have the idea of creating a system for distributed computing using browsers.\n<img src='posts/idea.jpg' style='width:100%' />\nSimilar to Cryptojacking, websites include our JavaScript which calls our backend. Our backend then sends across the tasks to execute. After the client has executed the task, they send back the result to our backend.\n\nI foresee that this could be applied to any field that requires a large amount of concurrent tasks, for example, Machine Learning."
 }
