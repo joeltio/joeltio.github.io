@@ -12,18 +12,10 @@ export default class BlogPosts extends React.Component {
         }
     }
 
-    addPost(post) {
-        this.setState((prevState, props) => {
-            return {
-                posts: prevState.posts.concat(
-                    <BlogPost key={prevState.posts.length}
-                                title={post.title}
-                                datetime={post.datetime}>
-                        {post.content}
-                    </BlogPost>
-                )
-            };
-        });
+    addPost(post, postNum) {
+        this.setState(prevState => ({
+            posts: prevState.posts.concat({num: postNum, ...post})
+        }));
     }
 
     componentDidMount() {
@@ -47,10 +39,18 @@ export default class BlogPosts extends React.Component {
     }
 
     render() {
+        let posts = this.state.posts.map(post => (
+            <BlogPost key={post.postNum}
+                title={post.title}
+                datetime={post.datetime}>
+                {post.content}
+            </BlogPost>
+        ))
+
         return (
             <div class="mt-4">
                 {this.state.placeholder}
-                {this.state.posts}
+                {posts}
             </div>
         );
     }
