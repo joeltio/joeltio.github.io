@@ -25,7 +25,7 @@ export default class BlogPosts extends React.Component {
                 for (let i=0; i<numPosts; i++) {
                     axios.get(`/posts/${i}.json`)
                         .then(postResponse => {
-                            this.addPost(postResponse.data);
+                            this.addPost(postResponse.data, i);
                         });
                 }
 
@@ -39,10 +39,14 @@ export default class BlogPosts extends React.Component {
     }
 
     render() {
-        let posts = this.state.posts.map(post => (
-            <BlogPost key={post.postNum}
-                title={post.title}
-                datetime={post.datetime}>
+        let posts = this.state.posts
+        // Sort the posts, latest first
+        posts.sort((a, b) => { return a.num < b.num})
+
+        const content = posts.map(post => (
+            <BlogPost key={post.num}
+                      title={post.title}
+                      datetime={post.datetime}>
                 {post.content}
             </BlogPost>
         ))
@@ -50,7 +54,7 @@ export default class BlogPosts extends React.Component {
         return (
             <div class="mt-4">
                 {this.state.placeholder}
-                {posts}
+                {content}
             </div>
         );
     }
