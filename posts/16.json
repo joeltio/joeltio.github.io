@@ -1,0 +1,5 @@
+{
+    "title": "A different perspective",
+    "datetime": "9 Feb 2020",
+    "content": "<img src='posts/final_model.jpeg' style='width:100%' /> The final week was here, and our project was far from complete. On Monday, I planned what we can do during the time we have left. I knew that what was possible in the time frame was just the table detection, search and location features. With the Pi still not working and the model not complete, I had worked with Stephane to fix the Pi (we ended up flashing a fresh copy of Raspbian) and work on the model (which Stephane did most of). At the same time, I had told Zheng Yan to work on the slides, then Jeff, then Alvis. I passed the template of the slides to them and worked on the Android app instead.<br/><br/>I believe the presentation had gone well -- we were able to present what we have and why the idea works. I believe that the idea is useful, and it truly provides value to users. Hence, I am disappointed that we were unable to display its full potential. This experience provides me much to reflect upon, especially team dynamics. However, I will not be sharing it here as it is too personal."
+}
