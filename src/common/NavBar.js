@@ -1,29 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-import SmallName from "../common/SmallName";
-import NavName from "../common/NavName";
+import SmallName from "./SmallName";
+import NavName from "./NavName";
+import NavLocationType from "./NavLocationType";
 
 import styles from "./navBar.css"
 
-const NAV_NAMES = {
-    "/": "home",
-    "/about": "about",
-    "/blog": "blog",
-};
+const NavBar = (navLocations) => {
+    let navNames = navLocations.map(location => {
+        const isSelected = window.location.href.endsWith(location.path);
 
-const NavBar = () => {
-    let navNames = [];
-
-    for (const nav in NAV_NAMES) {
-        const name = NAV_NAMES[nav];
-        const isSelected = window.location.href.endsWith(nav);
-        navNames.push(
-            <NavName key={nav} to={nav}
+        return (
+            <NavName key={location.path} to={location.path}
                      className={styles.navItem} selected={isSelected}>
-                {name}
+                {location.name}
             </NavName>
-        );
-    }
+        )
+    });
 
     return (
         <nav>
@@ -36,5 +30,9 @@ const NavBar = () => {
         </nav>
     )
 };
+
+NavBar.propTypes = {
+    navLocations: PropTypes.arrayOf(NavLocationType),
+}
 
 export default NavBar;
