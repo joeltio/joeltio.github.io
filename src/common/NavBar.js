@@ -12,6 +12,7 @@ const NavBar = () => (
                 <SmallName inline>joel tio</SmallName>
             </div>
             <NavName className={styles.navItem} to="/">home</NavName>
+            <NavName className={styles.navItem} to="/about">about me</NavName>
             <NavName className={styles.navItem} to="/blog" selected>blog</NavName>
         </div>
     </nav>

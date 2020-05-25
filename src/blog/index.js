@@ -2,7 +2,7 @@ import React from "react";
 import Loadable from "react-loadable";
 
 const NavBar = Loadable({
-    loader: () => import("./NavBar"),
+    loader: () => import("../common/NavBar"),
     loading() {
         return <p>Loading</p>;
     }
