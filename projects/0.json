@@ -1,0 +1,9 @@
+{
+    "number": 0,
+    "title": "distro",
+    "date": "Jan 2019",
+    "textColor": "white",
+    "backgroundImage": "/projects/media/distro.png",
+    "link": "https://github.com/seannich/distro",
+    "description": "distro is a prototype which demonstrates distributed computing using JavaScript. It implements the BOINC, so it can be used in any BOINC project as well."
+}

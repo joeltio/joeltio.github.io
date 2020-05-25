@@ -8,12 +8,7 @@
 }
 
 .textContainer {
-    padding: 1rem;
     max-width: 600px;
-}
-
-.imgContainer {
-    padding: 1rem;
 }
 
 .img {
@@ -22,4 +17,15 @@
 
 .header {
     margin: 0;
+}
+
+/* These breakpoints are the same as bootstrap's */
+@media (min-width: 576px) {
+    .imgContainer {
+        padding: 1rem;
+    }
+
+    .textContainer {
+        padding: 1rem;
+    }
 }

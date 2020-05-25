@@ -1,0 +1,22 @@
+.anchor {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.container {
+    width: 270px;
+    height: 270px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin: 0;
+}
+
+.date {
+    margin: 0;
+    font-size: 0.8em;
+}
