@@ -12,17 +12,7 @@ module.exports = {
                     plugins: [
                         'react-html-attrs',
                         '@babel/plugin-syntax-dynamic-import',
-                        [
-                            'react-css-modules',
-                            {
-                                'filetypes': {
-                                    ".scss": {
-                                        "syntax": "postcss-scss"
-                                    }
-                                }
-                            }
-                        ]
-
+                        'react-css-modules',
                     ],
                 }
             },
@@ -40,22 +30,6 @@ module.exports = {
                     }
                 ]
             },
-            {
-                test: /\.scss$/,
-                exclude: /node_modules/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            importLoaders: 1
-                        }
-                    },
-                    'sass-loader'
-                ]
-            }
-
         ]
     },
     output: {

@@ -1,5 +1,0 @@
-{
-    "title": "Hackathon",
-    "datetime": "22 Nov 2019",
-    "content": "Last week, we had a 3-day hackathon where we spent a lot of time working on the project. Though for the first day I was trying to fix the byte-social-media, I was still able to write the code needed to link the Android application to Firebase. I have also changed the code to use Android architecture components.<br/><br/>During the process, I found out that Android also has architecture components for navigation. It was very interesting as Android had always had a clunky navigation system where developers just send intents here and there to start new activities. The navigation architecture component provides a central storyboard on the flow of the application (which I think XCode has had for quite a while now).<br/><br/>Moving forward, I hope that my teammates would be able to learn these things as they do make life much easier at the cost of the initial learning curve."
-}

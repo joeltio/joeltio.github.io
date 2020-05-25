@@ -1,32 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Loadable from "react-loadable";
-import { Route, HashRouter } from "react-router-dom";
 
-import Loading from "./common/Loading";
+import MainLayout from "./MainLayout";
 
-const HomeLayout = Loadable({
-    loader: () => import("./home/index"),
-    loading() {
-        return <Loading />;
-    }
-});
+const HomeLayout = React.lazy(() => import("./home"));
+const AboutLayout = React.lazy(() => import("./about"));
+const BlogLayout = React.lazy(() => import("./blog"));
 
-const BlogLayout = Loadable({
-    loader: () => import("./blog/index"),
-    loading() {
-        return <Loading />;
-    }
-});
-
-const MainLayout = () => (
-    <HashRouter>
-        <div class="h-100 container">
-            <Route path="/" exact component={HomeLayout} />
-            <Route path="/blog/" component={BlogLayout} />
-        </div>
-    </HashRouter>
-);
+const NAV_LOCATIONS = [
+    {
+        name: "home",
+        path: "/",
+        component: HomeLayout,
+    },
+    {
+        name: "about",
+        path: "/about",
+        component: AboutLayout,
+    },
+    {
+        name: "blog",
+        path: "/blog",
+        component: BlogLayout,
+    },
+];
 
 const app = document.getElementById("app");
-ReactDOM.render(<MainLayout/>, app);
+ReactDOM.render(<MainLayout navLocations={NAV_LOCATIONS} />, app);
