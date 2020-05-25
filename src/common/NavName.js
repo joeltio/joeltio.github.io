@@ -12,7 +12,7 @@ const NavName = props => {
     }
 
     return (
-        <Link to={props.to}>
+        <Link to={props.to} className={`${props.className} ${styles.linkStyle}`}>
             <p className={styleName}>{props.children}</p>
         </Link>
     );

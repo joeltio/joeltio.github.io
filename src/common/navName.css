@@ -17,3 +17,7 @@
     color: #696969;
     transition: color 0.1s;
 }
+
+.linkStyle {
+    text-decoration: none;
+}
