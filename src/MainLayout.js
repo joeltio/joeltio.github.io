@@ -5,7 +5,8 @@ import { Route, HashRouter } from "react-router-dom";
 import NavLocationType from "./common/NavLocationType";
 import Loading from "./common/Loading";
 
-import styles from "./client.css"
+import styles from "./mainLayout.css"
+import containerStyles from "./common/container.css"
 
 const MainLayout = ({navLocations}) => {
     const routes = navLocations.map(location => (
@@ -16,7 +17,7 @@ const MainLayout = ({navLocations}) => {
     return (
         <HashRouter>
             <Suspense fallback={<Loading />}>
-                <div className={styles.container}>
+                <div className={`${styles.container} ${containerStyles.container}`}>
                     {routes}
                 </div>
             </Suspense>
