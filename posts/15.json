@@ -1,5 +1,0 @@
-{
-    "title": "Negligible progress",
-    "datetime": "9 Feb 2020",
-    "content": "It seems that there was negligible progress in the week of 20 Jan and 27 Jan. During the week of 20 Jan, I realised that Jeff and Zheng Yan could not work on the Android project as they were unfamiliar with how Android navigation components worked. So, I committed myself (I had bet a dollar with Zheng Yan) to finish it on Wednesday, and I did. Following that, there was very little progress with the location and the search. Zheng Yan wasn't sure how to retrieve the current latitude and longitude in Android and was stuck. Alvis was trying to get the Pi to work, but couldn't. I had borrowed a junior's SD card so that we can flash a new copy of the OS onto the Pi.<br/><br/>In the following week, I was more busy with my UX Assignment. Alvis had tested the Pi and it was still not working. The location and the search was still not done, though, Stephane had created the 3D models for the tables in the model and had them printed at Sandbox."
-}
