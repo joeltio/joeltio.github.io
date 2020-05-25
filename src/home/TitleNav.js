@@ -8,7 +8,7 @@ import styles from "./titleNav.css";
 const TitleNav = () => (
     <div className={styles.container}>
         <div className={styles.leftItem}><SmallName>Joel Tio</SmallName></div>
-        <div className={styles.centerItem}><NavName to="/about" >about me</NavName></div>
+        <div className={styles.centerItem}><NavName to="/about" >about</NavName></div>
         <div className={styles.rightItem}><NavName to="/blog">blog</NavName></div>
     </div>
 );

@@ -14,6 +14,13 @@ const HomeLayout = Loadable({
     }
 });
 
+const AboutLayout = Loadable({
+    loader: () => import("./about/index"),
+    loading() {
+        return <Loading />;
+    }
+});
+
 const BlogLayout = Loadable({
     loader: () => import("./blog/index"),
     loading() {
@@ -25,6 +32,7 @@ const MainLayout = () => (
     <HashRouter>
         <div className={styles.container}>
             <Route path="/" exact component={HomeLayout} />
+            <Route path="/about/" component={AboutLayout} />
             <Route path="/blog/" component={BlogLayout} />
         </div>
     </HashRouter>

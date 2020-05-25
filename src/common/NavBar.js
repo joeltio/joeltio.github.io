@@ -5,17 +5,36 @@ import NavName from "../common/NavName";
 
 import styles from "./navBar.css"
 
-const NavBar = () => (
-    <nav>
-        <div className={styles.container}>
-            <div className={styles.signature}>
-                <SmallName inline>joel tio</SmallName>
+const NAV_NAMES = {
+    "/": "home",
+    "/about": "about",
+    "/blog": "blog",
+};
+
+const NavBar = () => {
+    let navNames = [];
+
+    for (const nav in NAV_NAMES) {
+        const name = NAV_NAMES[nav];
+        const isSelected = window.location.href.endsWith(nav);
+        navNames.push(
+            <NavName key={nav} to={nav}
+                     className={styles.navItem} selected={isSelected}>
+                {name}
+            </NavName>
+        );
+    }
+
+    return (
+        <nav>
+            <div className={styles.container}>
+                <div className={styles.signature}>
+                    <SmallName inline>joel tio</SmallName>
+                </div>
+                {navNames}
             </div>
-            <NavName className={styles.navItem} to="/">home</NavName>
-            <NavName className={styles.navItem} to="/about">about me</NavName>
-            <NavName className={styles.navItem} to="/blog" selected>blog</NavName>
-        </div>
-    </nav>
-);
+        </nav>
+    )
+};
 
 export default NavBar;
