@@ -32,7 +32,7 @@ const NavBar = ({navLocations}) => {
 };
 
 NavBar.propTypes = {
-    navLocations: PropTypes.arrayOf(NavLocationType),
+    navLocations: PropTypes.arrayOf(NavLocationType).isRequired,
 }
 
 export default NavBar;

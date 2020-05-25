@@ -2,9 +2,9 @@ import React from "react";
 
 import NavBar from "../common/NavBar";
 
-const AboutLayout = () => (
+const AboutLayout = ({navLocations}) => (
     <div>
-        <NavBar />
+        <NavBar navLocations={navLocations} />
     </div>
 )
 
