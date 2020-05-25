@@ -1,0 +1,30 @@
+.container {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* These breakpoints are the same as bootstrap's */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}

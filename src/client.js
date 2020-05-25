@@ -5,6 +5,8 @@ import { Route, HashRouter } from "react-router-dom";
 
 import Loading from "./common/Loading";
 
+import styles from "./client.css"
+
 const HomeLayout = Loadable({
     loader: () => import("./home/index"),
     loading() {
@@ -21,7 +23,7 @@ const BlogLayout = Loadable({
 
 const MainLayout = () => (
     <HashRouter>
-        <div class="h-100 container">
+        <div className={styles.container}>
             <Route path="/" exact component={HomeLayout} />
             <Route path="/blog/" component={BlogLayout} />
         </div>

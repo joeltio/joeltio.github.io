@@ -3,12 +3,12 @@ import React from "react";
 import SmallName from "../common/SmallName";
 import NavName from "../common/NavName";
 
+import styles from "./titleNav.css";
+
 const TitleNav = () => (
-    <div class="d-flex flex-row no-gutters justify-content-between align-items-baseline">
+    <div className={styles.container}>
         <SmallName>joel tio</SmallName>
-        <div class="align-self-center">
-            <NavName to="/" selected>home</NavName>
-        </div>
+        <NavName to="/" selected>home</NavName>
         <NavName to="/blog">blog</NavName>
     </div>
 );

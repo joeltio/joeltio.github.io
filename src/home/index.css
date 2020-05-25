@@ -1,0 +1,11 @@
+.outerContainer {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+}
