@@ -7,7 +7,7 @@ import NavLocationType from "./NavLocationType";
 
 import styles from "./navBar.css"
 
-const NavBar = (navLocations) => {
+const NavBar = ({navLocations}) => {
     let navNames = navLocations.map(location => {
         const isSelected = window.location.href.endsWith(location.path);
 

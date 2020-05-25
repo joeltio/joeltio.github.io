@@ -15,9 +15,9 @@ const BlogPosts = Loadable({
     }
 });
 
-const BlogLayout = () => (
+const BlogLayout = ({navLocations}) => (
     <div>
-        <NavBar />
+        <NavBar navLocations={navLocations} />
         <BlogPosts />
     </div>
 );

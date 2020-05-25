@@ -10,7 +10,7 @@ import styles from "./client.css"
 const MainLayout = ({navLocations}) => {
     const routes = navLocations.map(location => (
         <Route key={location.path} path={location.path} exact
-               component={location.component} />
+               render={() => ( <location.component navLocations={navLocations} /> )} />
     ));
 
     return (
