@@ -1,3 +1,5 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
     context: __dirname,
     entry: './src/client.js',
@@ -32,6 +34,9 @@ module.exports = {
             },
         ]
     },
+    plugins: [
+        new CleanWebpackPlugin(),
+    ],
     output: {
         path: __dirname + '/build/',
         publicPath: '/build/',
