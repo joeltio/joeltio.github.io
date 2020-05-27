@@ -1,8 +1,8 @@
 import React from "react";
 
-import NavBar from "../common/NavBar";
-import AboutMe from "./AboutMe";
-import Projects from "./Projects";
+const NavBar = React.lazy(() => import("../common/NavBar"));
+const AboutMe = React.lazy(() => import("./AboutMe"));
+const Projects = React.lazy(() => import("./Projects"));
 
 const AboutLayout = ({navLocations}) => (
     <div>

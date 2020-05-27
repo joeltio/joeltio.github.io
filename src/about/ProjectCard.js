@@ -23,4 +23,4 @@ const ProjectCard = ({project}) => {
     );
 }
 
-export default ProjectCard;
+export default React.memo(ProjectCard);
