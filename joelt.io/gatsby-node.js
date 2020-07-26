@@ -8,7 +8,8 @@ exports.createPages = async ({ graphql, actions }) => {
     const result = await graphql(`
         {
           allMarkdownRemark(
-            sort: { fields: [frontmatter___date], order: DESC }
+            sort: { fields: [frontmatter___date], order: DESC },
+            filter: {fields: {slug: {ne: "/about-me/"}}, fileAbsolutePath: {regex: "/(blog)/"}},
             limit: 1000
           ) {
             edges {

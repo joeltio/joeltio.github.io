@@ -53,7 +53,7 @@ export const pageQuery = graphql`
         }
         allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC },
-            filter: { fields: { slug: { ne: "/about-me/" } } },
+            filter: {fields: {slug: {ne: "/about-me/"}}, fileAbsolutePath: {regex: "/(blog)/"}}
         ) {
             edges {
                 node {
