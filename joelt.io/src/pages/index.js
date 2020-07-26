@@ -1,72 +1,84 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { rhythm } from '../utils/typography';
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+import styles from './index.module.css';
 
-  return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
-    </Layout>
-  )
-}
+const Home = ({ data, location }) => {
+    const post = data.markdownRemark;
+    const siteTitle = data.site.siteMetadata.title;
 
-export default BlogIndex
+    return (
+        <Layout location={location} title={siteTitle}>
+            <SEO title="Home" />
+            <article>
+                <header>
+                    <h2
+                        style={{
+                            marginTop: rhythm(1),
+                            marginBottom: rhythm(1),
+                            textAlign: 'center',
+                        }}
+                    >
+                        {post.frontmatter.title}
+                    </h2>
+                </header>
+                <section
+                    className={styles.content}
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Img
+                        fluid={data.me.childImageSharp.fluid}
+                        alt="me"
+                        style={{
+                            marginBottom: rhythm(1),
+                            width: '70%',
+                        }}
+                    />
+                    <div
+                        dangerouslySetInnerHTML={{ __html: post.html }}
+                    />
+                </section>
+                <hr
+                    style={{
+                        marginBottom: rhythm(1),
+                    }}
+                />
+            </article>
+        </Layout>
+    );
+};
+
+export default Home;
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
+    query {
+        site {
+            siteMetadata {
+                title
+            }
         }
-      }
+        markdownRemark(fields: { slug: { eq: "/about-me/" } }) {
+            id
+            excerpt(pruneLength: 160)
+            html
+            frontmatter {
+                title
+            }
+        }
+        me: file(relativePath: { eq: "me.jpg"}) {
+            childImageSharp {
+                fluid(maxWidth: 590) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
     }
-  }
-`
+`;
