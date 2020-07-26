@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import { rhythm } from '../utils/typography';
@@ -56,9 +56,18 @@ const Bio = () => {
                 {' '}
                 {author.summary}
                 {' '}
+                Check out
+                {' '}
+                <Link to="/">
+                    the home page
+                </Link>
+                {' '}
+                or
+                {' '}
                 <a href={`https://github.com/${social.github}`}>
-                    Check out his GitHub!
+                    his GitHub
                 </a>
+                !
             </p>
         </div>
     );

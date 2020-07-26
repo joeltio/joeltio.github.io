@@ -11,7 +11,7 @@ module.exports = {
         },
         navbarLinks: [
             {
-                name: 'Home',
+                name: 'About',
                 link: '/',
                 exact: true,
             },
