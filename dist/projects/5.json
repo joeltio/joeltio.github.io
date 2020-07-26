@@ -1,8 +1,0 @@
-{
-    "number": 5,
-    "title": "Google Form Filler",
-    "date": "Feb 2019",
-    "textColor": "black",
-    "link": "https://github.com/joeltio/google-form-python",
-    "description": "In my secondary school days, there was a week where we would evaluate our teachers with a fixed questionnaire over the span of 2 weeks. Once we were done, we could do our own work until everyone was done. So, since the questions were the same, I wrote a program to fill the Google Forms for me once the forms were opened."
-}

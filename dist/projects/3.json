@@ -1,8 +1,0 @@
-{
-    "number": 3,
-    "title": "Terraform ospath",
-    "date": "Oct 2019",
-    "textColor": "black",
-    "link": "https://github.com/joeltio/terraform-provider-ospath",
-    "description": "Using terraform was great for writing more granular IaC for AWS. Oddly enough, there wasn't a path joining tool provided in the DSL. So I wrote one."
-}
