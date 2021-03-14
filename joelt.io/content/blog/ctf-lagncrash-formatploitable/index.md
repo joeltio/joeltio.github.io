@@ -1,10 +1,12 @@
 ---
 title: "Lag'n'Crash CTF: Formatploitable"
 date: "2021-03-14T08:13:21Z"
-description: "Write-up for Lag'n'Crash CTF challenge, formatploitable"
+description: "Write-up for Lag'n'Crash CTF challenge, Formatploitable"
 ---
 # Challenge Overview
 [_Skip to solution_](#Solution)
+
+This challenge is under the Misc category.
 > Our intel says that the flag is a global variable in this python program, yet we cannot retrieve it through normal means.
 >
 > nc challenge1.lagncrash.com 13028
