@@ -1,6 +1,6 @@
 ---
 title: "Lag'n'Crash CTF: Hidden Password"
-date: "2021-03-14T08:13:21Z"
+date: "2021-03-14T09:54:37Z"
 description: "Write-up for Lag'n'Crash CTF challenge, Hidden Password"
 ---
 # Challenge Overview
