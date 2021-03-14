@@ -4,7 +4,7 @@ date: "2021-03-14T09:54:37Z"
 description: "Write-up for Lag'n'Crash CTF challenge, Hidden Password"
 ---
 # Challenge Overview
-[_Skip to solution_](#Solution)
+[_Skip to solution_](#solution)
 
 This challenge is under the Forensics category.
 > The flag is in the zip… But I can’t figure out the password?
