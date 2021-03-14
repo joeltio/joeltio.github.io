@@ -4,6 +4,7 @@ date: "2021-03-14T08:13:21Z"
 description: "Write-up for Lag'n'Crash CTF challenge, formatploitable"
 ---
 # Challenge Overview
+[_Skip to solution_](#Solution)
 > Our intel says that the flag is a global variable in this python program, yet we cannot retrieve it through normal means.
 >
 > nc challenge1.lagncrash.com 13028
@@ -17,7 +18,7 @@ Welcome to Rafale 1.0!
 4) Exit
 ```
 
-We can create a profile and provide a name and a bio:
+**Create profile**:
 ```
 (picked option 1)
 Enter name: Dave
@@ -25,7 +26,7 @@ Welcome Dave! Enter a short biography for your profile:
 Hi, I'm Dave
 ```
 
-We can display our profile:
+**View badge**:
 ```
 (picked option 2)
 ╔════════════════════════════════════════════════
@@ -34,7 +35,7 @@ We can display our profile:
 ╚════════════════════════════════════════════════
 ```
 
-We can view patch notes:
+**Patch Notes**:
 ```
 (picked option 3)
 Update 1.0.94795585:
@@ -86,7 +87,7 @@ Then, view our profile:
 ╚════════════════════════════════════════════════
 ```
 
-So we can see the flag is `LNC{sTr1ng_f0rm4tT1nG_xpl0it3d}'}`.
+So we can see the flag is `LNC{sTr1ng_f0rm4tT1nG_xpl0it3d}`.
 
 # Explanation and other possibilities
 ## 1. Keyword arguments vs positional arguments
