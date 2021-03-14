@@ -1,6 +1,6 @@
 ---
 title: "Lag'n'Crash CTF: Formatploitable"
-date: "2021-02-21T05:15:44Z"
+date: "2021-03-14T08:13:21Z"
 description: "Write-up for Lag'n'Crash CTF challenge, formatploitable"
 ---
 # Challenge Overview
