@@ -1,11 +1,12 @@
 ---
 title: "Lag'n'Crash CTF: Tedious? Or is it?"
-date: "2021-03-14T08:13:21Z"
+date: "2021-03-14T07:09:20Z"
 description: "Write-up for Lag'n'Crash CTF challenge, Tedious? Or is it?"
 ---
 # Challenge Overview
 [_Skip to solution_](#solution)
 
+This challenge is under the Misc category.
 > My friend pranked me and hide my secret in one these!
 
 A file named tedious.zip is attached. You can download it [here](./tedious.zip).
